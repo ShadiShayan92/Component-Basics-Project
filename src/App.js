@@ -1,7 +1,8 @@
 import ExpenseItem from "./components/ExpenseItem";
 import "./App.css";
+import CurrentTimeDisplay from "./components/ExpenseTime";
 
-function App() {
+function App(props) {
   const expenses = [
     {
       title: "New TV",
@@ -31,6 +32,7 @@ function App() {
   return (
     <div>
       <h2>Let's get start.. </h2>
+      <CurrentTimeDisplay time={props.CurrentTimeDisplay}></CurrentTimeDisplay>
 
       <ExpenseItem
         title={expenses[0].title}
