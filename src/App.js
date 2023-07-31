@@ -1,9 +1,9 @@
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 import "./App.css";
-import CurrentTimeDisplay from "./components/ExpenseTime";
-import shadiLogo from "./components/Images/shadiLogo.png";
+import CurrentTimeDisplay from "./components/Expenses/ExpenseTime";
+import shadiLogo from "./components/UI/Images/shadiLogo.png";
 
-function App(props) {
+const App = (props) => {
   const expenses = [
     {
       id: "e1",
@@ -43,6 +43,6 @@ function App(props) {
       <Expenses items={expenses} />
     </div>
   );
-}
+};
 
 export default App;
