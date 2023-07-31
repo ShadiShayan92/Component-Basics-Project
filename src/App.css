@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.shadi-Logo {
+  max-width: 10%;
+  border-radius: 50%;
+  border: solid 2px black;
+  justify-content: center;
+  margin: 20px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
