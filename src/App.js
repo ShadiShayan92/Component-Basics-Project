@@ -2,6 +2,7 @@ import Expenses from "./components/Expenses/Expenses";
 import "./App.css";
 import CurrentTimeDisplay from "./components/Expenses/ExpenseTime";
 import shadiLogo from "./components/UI/Images/shadiLogo.png";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = (props) => {
   const expenses = [
@@ -9,28 +10,28 @@ const App = (props) => {
       id: "e1",
       title: "New TV",
       amount: 294.67,
-      date: new Date(2023, 7, 18),
+      date: new Date(2020, 9, 22),
     },
 
     {
       id: "e2",
-      title: "Car insurance",
-      amount: 394.67,
-      date: new Date(2023, 8, 18),
+      title: "New Desk (wooden)",
+      amount: 494.67,
+      date: new Date(2022, 9, 10),
     },
 
     {
       id: "e3",
-      title: "New Desk (wooden)",
-      amount: 494.67,
-      date: new Date(2023, 9, 18),
+      title: "Car insurance",
+      amount: 594.67,
+      date: new Date(2021, 10, 18),
     },
 
     {
       id: "e4",
-      title: "Car insurance",
-      amount: 594.67,
-      date: new Date(2023, 10, 18),
+      title: "Toilet Paper",
+      amount: 94.12,
+      date: new Date(2020, 7, 14),
     },
   ];
 
@@ -40,6 +41,7 @@ const App = (props) => {
         <img className="shadi-Logo" src={shadiLogo}></img>
       </div>
       <CurrentTimeDisplay time={props.CurrentTimeDisplay}></CurrentTimeDisplay>
+      <NewExpense></NewExpense>
       <Expenses items={expenses} />
     </div>
   );
