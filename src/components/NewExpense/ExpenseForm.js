@@ -5,13 +5,21 @@ const ExpenseForm = () => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
-  const [enteredName, setEnteredName] = useState("");
-  const [enteredAddress, setEnteredAddress] = useState("");
-  const [enteredPhone, setEnteredPhone] = useState("");
+  //   const [enteredName, setEnteredName] = useState("");
+  //   const [enteredAddress, setEnteredAddress] = useState("");
+  //   const [enteredPhone, setEnteredPhone] = useState("");
 
-  const fullNameChangeHandler = (event) => {
-    setEnteredName(event.target.value);
-  };
+  //   const fullNameChangeHandler = (event) => {
+  //     setEnteredName(event.target.value);
+  //   };
+
+  //   const addressChangeHandler = (event) => {
+  //     setEnteredAddress(event.target.value);
+  //   };
+
+  //   const phoneChangeHandler = (event) => {
+  //     setEnteredPhone(event.target.value);
+  //   };
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -23,14 +31,6 @@ const ExpenseForm = () => {
 
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
-  };
-
-  const addressChangeHandler = (event) => {
-    setEnteredAddress(event.target.value);
-  };
-
-  const phoneChangeHandler = (event) => {
-    setEnteredPhone(event.target.value);
   };
 
   //   const [userInput, setUserInput] = useState({
@@ -71,24 +71,24 @@ const ExpenseForm = () => {
     // and also set the value property for inputs: EX --> value={enteredDate}
     // --------------------------------
 
-    setEnteredName("");
-    setEnteredPhone("");
-    setEnteredAddress("");
+    // setEnteredName("");
+    // setEnteredPhone("");
+    // setEnteredAddress("");
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
   };
 
-  const myStyle = {
-    color: "white",
-    padding: "10px",
-    margin: "20px",
-  };
+  //   const myStyle = {
+  //     color: "white",
+  //     padding: "10px",
+  //     margin: "20px",
+  //   };
 
   return (
     <>
       <form onSubmit={submitHandler}>
-        <label style={myStyle}>Personal Information: </label>
+        {/* <label style={myStyle}>Personal Information: </label>
         <div className="new-expense__controls">
           <div className="new-expense__control">
             <label>Full Name: </label>
@@ -115,7 +115,7 @@ const ExpenseForm = () => {
         </div>
         <br></br>
         <hr></hr>
-        <br></br>
+        <br></br> */}
         <div className="new-expense__controls">
           <div className="new-expense__control">
             <label>Title</label>
