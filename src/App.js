@@ -35,13 +35,18 @@ const App = (props) => {
     },
   ];
 
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js");
+    console.log(expense);
+  };
+
   return (
     <div>
       <div>
         <img className="shadi-Logo" src={shadiLogo}></img>
       </div>
       <CurrentTimeDisplay time={props.CurrentTimeDisplay}></CurrentTimeDisplay>
-      <NewExpense></NewExpense>
+      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
       <Expenses items={expenses} />
     </div>
   );

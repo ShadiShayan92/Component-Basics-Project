@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
@@ -54,14 +54,11 @@ const ExpenseForm = () => {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    ////------------khodam comment kardam bebinam chi mishe
-    // const expenseDate = {
-    //   title: enteredTitle,
-    //   amount: enteredAmount,
-    //   date: new Date(enteredDate),
-    // };
-    // console.log(expenseDate);
-    // -----------------ta inja
+    const expenseDate = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate),
+    };
 
     // --------------------------------
     // important tip: Hoe can we clear inputs:
@@ -74,6 +71,7 @@ const ExpenseForm = () => {
     // setEnteredName("");
     // setEnteredPhone("");
     // setEnteredAddress("");
+    props.onSaveExpenseData(expenseDate);
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
